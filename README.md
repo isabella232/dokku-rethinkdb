@@ -112,9 +112,11 @@ dokku rethinkdb:link lolipop playground
 # and the following will be set on the linked application by default
 #
 #   RETHINKDB_URL=rethinkdb://dokku-rethinkdb-lolipop:28015/lolipop
+#   JDBC_RETHINKDB_URL=rethinkdb://dokku-rethinkdb-lolipop:28015/lolipop?user=&password=
 #
 # NOTE: the host exposed here only works internally in docker containers. If
 # you want your container to be reachable from outside, you should use `expose`.
+# As well, we shall omit the JDBC url from all following examples for brevity.
 
 # another service can be linked to your app
 dokku rethinkdb:link other_service playground
